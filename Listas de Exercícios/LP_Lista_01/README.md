@@ -101,14 +101,7 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-      F["Sua resposta aqui!"]
-   ```
-   
-8. Construa um fluxograma para calcular o fatorial de um número fornecido pelo usuário.
-   
-   ```mermaid
-   flowchart TD
-     start(( Início )) --> inputNum1[\ Digite o primeiro número \]
+        start(( Início )) --> inputNum1[\ Digite o primeiro número \]
     inputNum1 --> inputNum2[\ Digite o segundo número \]
     inputNum2 --> inputNum3[\ Digite o terceiro número \]
     inputNum3 --> check1{ O primeiro número é maior que os outros dois? }
@@ -122,6 +115,13 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
     maior2 --> finish
     maior3 --> finish
     igual --> finish
+   ```
+   
+8. Construa um fluxograma para calcular o fatorial de um número fornecido pelo usuário.
+   
+   ```mermaid
+   flowchart TD
+   
    ```
    
 9. Elabore um fluxograma para verificar se um número digitado pelo usuário é par.
