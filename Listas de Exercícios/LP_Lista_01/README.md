@@ -36,7 +36,7 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
       start(( Início )) --> inputNota[\ Digite sua Nota \]
       inputFrequencia[\ Digite sua Frequência em % \]
     inputNota --> inputFrequencia
-    inputFrequencia --> verification{ Nota >= 50 e Frequência >= 75%? }
+    inputFrequencia --> verification{ Nota >= 50 \n e \n Frequência >= 75%? }
     verification --> |Sim| A[/ Aprovado /]
     verification --> |Não| B[/ Reprovado /]
     A --> finish([ Fim ])
@@ -58,21 +58,43 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-      C["Sua resposta aqui!"]
+       start(( Início )) --> input[\ Digite um número \]
+    input --> check{ Número >= 0? }
+    check --> |Sim| positive[Exibir Positivo]
+    check --> |Não| negative[Exibir Negativo]
+    positive --> finish([ Fim ])
+    negative --> finish
    ```
    
 5. Desenvolva um fluxograma que leia a idade de uma pessoa e indique se ela pode votar.
    
    ```mermaid
    flowchart TD
-      D["Sua resposta aqui!"]
+      start(( Início )) --> input[\ Digite sua idade \]
+    input --> check{ Idade >= 16 \n e possui titulo ? }
+    check --> |Sim| Vote[Exibir Você pode votar.]
+    check --> |Não| noVote[Exibir Você não pode votar.]
+    
+    noVote --> finish([ Fim ])
+    Vote --> finish([ Fim ])
+ 
+
    ```
    
 6. Crie um fluxograma que leia dois números e determine o maior entre eles.
    
    ```mermaid
    flowchart TD
-      E["Sua resposta aqui!"]
+      start(( Início )) --> inputNum1[\ Digite o primeiro número \]
+    inputNum1 --> inputNum2[\ Digite o segundo número \]
+    inputNum2 --> check{ O primeiro número é maior que o segundo? }
+    check --> |Sim| maior1[Exibir O primeiro número é o maior.]
+    check --> |Não| check2{ O segundo número é maior que o primeiro? }
+    check2 --> |Sim| maior2[Exibir O segundo número é o maior.]
+    check2 --> |Não| igual[Exibir Os números são iguais.]
+    maior1 --> finish([ Fim ])
+    maior2 --> finish
+    igual --> finish
    ```
    
 7. Crie um fluxograma que leia três números e determine o maior entre eles.
@@ -86,7 +108,20 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-      G["Sua resposta aqui!"]
+     start(( Início )) --> inputNum1[\ Digite o primeiro número \]
+    inputNum1 --> inputNum2[\ Digite o segundo número \]
+    inputNum2 --> inputNum3[\ Digite o terceiro número \]
+    inputNum3 --> check1{ O primeiro número é maior que os outros dois? }
+    check1 --> |Sim| maior1[Exibir O primeiro número é o maior.]
+    check1 --> |Não| check2{ O segundo número é maior que o terceiro? }
+    check2 --> |Sim| maior2[Exibir O segundo número é o maior.]
+    check2 --> |Não| check3{ Os três números são iguais? }
+    check3 --> |Sim| igual[Exibir Os números são iguais.]
+    check3 --> |Não| maior3[Exibir O terceiro número é o maior.]
+    maior1 --> finish([ Fim ])
+    maior2 --> finish
+    maior3 --> finish
+    igual --> finish
    ```
    
 9. Elabore um fluxograma para verificar se um número digitado pelo usuário é par.
