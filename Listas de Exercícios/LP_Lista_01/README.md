@@ -141,5 +141,15 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-      I["Sua resposta aqui!"]
+      start((Início)) --> inputNum[\Digite um número N\]
+    inputNum --> check1{N <= <2?}
+    check1 --> |Sim| naoprimo[/Exibir O número não é primo./]
+    check1 --> |Não| primo[i=n/2]
+    --> check2{i>1}
+    check2 --> |Sim| check3{n % i ==0?}
+    check2 --> |Não| primo2[/é primo/]
+    check3 --> |Sim| naoprimo[/Exibir O número não é primo./]
+    check3 --> |Não| resultado[i=i-1]
+    primo2 --> finish
+    naoprimo --> finish
    ```
