@@ -121,6 +121,17 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
+   start((Início)) --> inputNum[\Digite um número N\]
+    inputNum --> check1{N <= 0?}
+    check1 --> |Sim| fatorial1[Exibir O fatorial de 0 é 1.]
+    check1 --> |Não| inicialize[Inicialize fatorial = 1 e i = 1]
+    inicialize --> check2{i <= N?}
+    check2 --> |Sim| multiply[fatorial = fatorial * i]
+    multiply --> incremente[i = i + 1]
+    incremente --> check2
+    check2 --> |Não| resultado[Exibir O fatorial de N é fatorial.]
+    fatorial1 --> finish([Fim])
+    resultado --> finish
    
    ```
    
@@ -134,7 +145,12 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-      H["Sua resposta aqui!"]
+      start((Início)) --> inputNumero[\Digite um número N\]
+    inputNumero --> check1{N % 2 == 0?}
+    check1 --> |Sim| even[Exibir O número é par.]
+    check1 --> |Não| odd[Exibir O número é ímpar.]
+    even --> finish([Fim])
+    odd --> finish
    ```
    
 10. Elabore um fluxograma para verificar se um número digitado pelo usuário é primo.
