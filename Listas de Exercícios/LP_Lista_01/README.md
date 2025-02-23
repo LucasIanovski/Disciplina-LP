@@ -118,24 +118,25 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    ```
    
 8. Construa um fluxograma para calcular o fatorial de um número fornecido pelo usuário.
-   
-   ```mermaid
+
+```mermaid
    flowchart TD
-   start((Início)) --> inputNum[\Digite um número N\]
-    inputNum --> check1{N <= 0?}
-    check1 --> |Sim| fatorial1[Exibir O fatorial de 0 é 1.]
-    check1 --> |Não| inicialize[Inicialize fatorial = 1 e i = 1]
-    inicialize --> check2{i <= N?}
-    check2 --> |Sim| multiply[fatorial = fatorial * i]
-    multiply --> incremente[i = i + 1]
-    incremente --> check2
-    check2 --> |Não| resultado[Exibir O fatorial de N é fatorial.]
-    fatorial1 --> finish([Fim])
-    resultado --> finish
-   
+
+      A((Inicio)) --> B[\Digite n\]
+      B --> C[r=1]
+      C --> D{n>1?}
+      D --> |Sim| E[r=r*n]
+      E --> F[n=n-1]
+      F --> D
+      D --> |Não| G[/Resposta = r/]
+      G --> f1([Fim])
+
    ```
+
+
+
    
-9. Elabore um fluxograma para verificar se um número digitado pelo usuário é par.
+9.Elabore um fluxograma para verificar se um número digitado pelo usuário é par.
    
    > Em várias linguagens de programação, o operador % retorna o resto da divisão entre dois números.    
    > 
@@ -145,12 +146,12 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-      start((Início)) --> inputNumero[\Digite um número N\]
-    inputNumero --> check1{N % 2 == 0?}
-    check1 --> |Sim| even[Exibir O número é par.]
-    check1 --> |Não| odd[Exibir O número é ímpar.]
-    even --> finish([Fim])
-    odd --> finish
+start((Inicio)) --> inputNumero[\Digite um numero N\]
+inputNumero --> check1{N % 2 == 0?}
+check1 --> |Sim| even[/Exibir o numero é par./]
+check1 --> |Nao| odd[/Exibir o numero é impar./]
+even --> finish([Fim])
+odd --> finish
    ```
    
 10. Elabore um fluxograma para verificar se um número digitado pelo usuário é primo.
@@ -166,6 +167,6 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
     check2 --> |Não| primo2[/é primo/]
     check3 --> |Sim| naoprimo[/Exibir O número não é primo./]
     check3 --> |Não| resultado[i=i-1]
-    primo2 --> finish
-    naoprimo --> finish
+    primo2 --> final
+    naoprimo --> final
    ```
