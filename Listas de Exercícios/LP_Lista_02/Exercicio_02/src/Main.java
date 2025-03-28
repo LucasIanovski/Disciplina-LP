@@ -4,13 +4,14 @@ public class Main {
     public static void main(String[] args) {
         int number, result;
 
-        System.out.println("Write a number: ");
+        Scanner in = new Scanner(System.in); // Configura o Scanner
 
-        Scanner in = new Scanner(System.in); // Configura o scanner para ler os dados que o usuário insere no teclado
-        number = in.nextInt(); // Lê o número inteiro inserido pelo usuário
+        System.out.println("Digite um número");
+        number = in.nextInt();  // Lê o número inteiro
+        result = number * number;    // Calcula o quadrado do número
 
-        result = number * number; // Calcula o quadrado do número
-        System.out.println("Square of " + number + " is: " + result); // Agora, a mensagem está correta para um cálculo de quadrado.
+        System.out.print("O Quadrado de " + number + " é " + result);  // Exibe o resultado
+
 
     }
 }

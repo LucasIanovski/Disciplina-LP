@@ -2,29 +2,20 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // Declaração das variáveis para armazenar as notas
-        double note1, note2, average;
+        double N1, N2, media;
 
-        // Solicita ao usuário que insira as duas notas
-        System.out.println("Write the first note: ");
-        System.out.println("Write the second note: ");
+        Scanner in = new Scanner(System.in); // Configura o Scanner
 
-        // Configura o scanner para ler os dados que o usuário insere no teclado
-        Scanner in = new Scanner(System.in);
+        System.out.println("Digite a primeira nota (N1):");
+        N1 = in.nextDouble();  // Lê a primeira nota
 
-        // Lê a primeira nota
-        note1 = in.nextDouble();
+        System.out.println("Digite a segunda nota (N2):");
+        N2 = in.nextDouble();  // Lê a segunda nota
 
-        // Lê a segunda nota
-        note2 = in.nextDouble();
+        media = (N1 + N2) / 2;  // Calcula a média das duas notas
 
-        // Calcula a média das duas notas
-        average = (note1 + note2) / 2;
+        System.out.println("A média das notas é: " + media);  // Exibe o resultado
 
-        // Exibe o resultado
-        System.out.println("The average of " + note1 + " and " + note2 + " is: " + average);
 
-        // Fecha o scanner para liberar recursos
-        in.close();
     }
 }

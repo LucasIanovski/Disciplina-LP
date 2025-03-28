@@ -2,15 +2,16 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        double number, result;
+      double number, result;
 
-        System.out.println("Write a real number: ");
+        Scanner in = new Scanner(System.in); // Configura o Scanner
 
-        Scanner in = new Scanner(System.in); // Configura o scanner para ler os dados que o usuário insere no teclado
-        number = in.nextDouble(); // Lê o número real inserido pelo usuário
+        System.out.println("Digite um número");
+        number = in.nextDouble();  // Lê o número real
+        result = number / 5;       // Calcula a quinta parte do número
 
-        result = number / 5; // Calcula a quinta parte do número
-        System.out.println("The fifth part of " + number + " is: " + result); // Exibe o resultado
+        System.out.print("A quinta parte de " + number + " é " + result);  // Exibe o resultado
+
 
     }
 }

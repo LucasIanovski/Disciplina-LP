@@ -1,32 +1,16 @@
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
-class ConversorMilhasParaQuilometros {
+public class Main {
     public static void main(String[] args) {
-        // Declaração da variável para armazenar a distância em milhas
-        double milhas = 0;
+        double milhas, resultado;  // nome da variável
 
-        // Configura o scanner para ler a entrada do usuário
-        Scanner scanner = new Scanner(System.in);
+        Scanner in = new Scanner(System.in); // Configura o Scanner
 
-        // Solicita ao usuário que insira a distância em milhas
-        System.out.print("Digite a distância em milhas (mi): ");
+        System.out.println("Digite a distancia em milhas:");
+        milhas = in.nextDouble();  // Lê a primeira medida
 
-        try {
-            // Tenta ler a distância em milhas
-            milhas = scanner.nextDouble();
+        resultado = milhas / 1.609;  // Calcula a conversão de milhas para km
 
-            // Converte a distância para quilômetros
-            double quilometros = milhas * 1.60934;
-
-            // Exibe o resultado
-            System.out.println(milhas + " milhas equivalem a " + quilometros + " quilômetros.");
-        } catch (InputMismatchException e) {
-            // Captura erros de entrada inválida
-            System.out.println("Erro: Por favor, insira um número válido.");
-        } finally {
-            // Fecha o scanner para liberar recursos
-            scanner.close();
-        }
+        System.out.println("A distancia em km é " + resultado);  // Exibe o resultado
     }
 }

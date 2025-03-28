@@ -1,32 +1,17 @@
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
-class ConversorVelocidadeMsParaKms {
+public class Main {
     public static void main(String[] args) {
-        // Declaração da variável para armazenar a velocidade em m/s
-        double velocidadeMPorS = 0;
+        double M_s, Km_h;
 
-        // Configura o scanner para ler a entrada do usuário
-        Scanner scanner = new Scanner(System.in);
+        Scanner in = new Scanner(System.in); // Configura o Scanner
 
-        // Solicita ao usuário que insira a velocidade em m/s
-        System.out.print("Digite a velocidade em m/s: ");
+        System.out.println("Digite a velocidade em M_s:");
+        M_s = in.nextDouble();  // Lê a velocidade em M_s
 
-        try {
-            // Tenta ler a velocidade
-            velocidadeMPorS = scanner.nextDouble();
+        Km_h = (M_s * 3.6);  // Converte km/h para m/s
 
-            // Converte a velocidade para km/s
-            double velocidadeKmPorS = velocidadeMPorS / 1000;
-
-            // Exibe o resultado
-            System.out.println(velocidadeMPorS + " m/s equivalem a " + velocidadeKmPorS + " km/s.");
-        } catch (InputMismatchException e) {
-            // Captura erros de entrada inválida
-            System.out.println("Erro: Por favor, insira um número válido.");
-        } finally {
-            // Fecha o scanner para liberar recursos
-            scanner.close();
-        }
+        System.out.println("Velocidade em M/s: " + Km_h);  // Exibe a velocidade em M/s
+        System.out.println("Velocidade em Km/h: " + M_s);  // Exibe a conversão para Km/h
     }
 }

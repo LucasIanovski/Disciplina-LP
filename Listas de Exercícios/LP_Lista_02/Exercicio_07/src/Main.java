@@ -1,32 +1,16 @@
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
-class ConversorMilimetrosParaPolegadas {
+public class Main {
     public static void main(String[] args) {
-        // Declaração da variável para armazenar a medida em milímetros
-        double milimetros = 0;
+        double Milimetros, resultado;
 
-        // Configura o scanner para ler a entrada do usuário
-        Scanner scanner = new Scanner(System.in);
+        Scanner in = new Scanner(System.in); // Configura o Scanner
 
-        // Solicita ao usuário que insira a medida em milímetros
-        System.out.print("Digite a medida em milímetros (mm): ");
+        System.out.println("Digite a medida em milimetros:");
+        Milimetros = in.nextDouble();  // Lê a primeira medida
 
-        try {
-            // Tenta ler a medida em milímetros
-            milimetros = scanner.nextDouble();
+        resultado = Milimetros / 25.4;  // Calcula a média das duas notas
 
-            // Converte a medida para polegadas
-            double polegadas = milimetros / 25.4;
-
-            // Exibe o resultado
-            System.out.println(milimetros + " mm equivalem a " + polegadas + " polegadas.");
-        } catch (InputMismatchException e) {
-            // Captura erros de entrada inválida
-            System.out.println("Erro: Por favor, insira um número válido.");
-        } finally {
-            // Fecha o scanner para liberar recursos
-            scanner.close();
-        }
+        System.out.println(" A medida em polegadas é " + resultado);  // Exibe o resultado
     }
 }
