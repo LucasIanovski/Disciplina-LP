@@ -9,7 +9,7 @@ public class Main {
         System.out.println("Digite a distancia em milhas:");
         milhas = in.nextDouble();  // Lê a primeira medida
 
-        resultado = milhas / 1.609;  // Calcula a conversão de milhas para km
+        resultado = milhas * 1.60934;  // Calcula a conversão de milhas para km
 
         System.out.println("A distancia em km é " + resultado);  // Exibe o resultado
     }
