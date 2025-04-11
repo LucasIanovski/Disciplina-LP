@@ -2,30 +2,18 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        double n1, n2, media;
+        Scanner sc = new Scanner(System.in);
+        int maior = Integer.MIN_VALUE, menor = Integer.MAX_VALUE, num;
 
-        System.out.print("Digite a primeira nota: ");
-        n1 = input.nextDouble();
+        for (int i = 1; i <= 5; i++) {
+            System.out.print("Digite o " + i + "º número: ");
+            num = sc.nextInt();
 
-        System.out.print("Digite a segunda nota: ");
-        n2 = input.nextDouble();
-
-        if (n1 < 0 || n1 > 10 || n2 < 0 || n2 > 10) {
-            System.out.println("Erro: As notas devem estar entre 10 e 100.");
-        } else {
-            media = (n1 + n2) / 2;
-            System.out.println("Média: " + media);
-
-            if (media >= 8.5) {
-                System.out.println("Conceito: A");
-            } else if (media >= 7) {
-                System.out.println("Conceito: B");
-            } else if (media >= 5) {
-                System.out.println("Conceito: C");
-            } else {
-                System.out.println("Conceito: D");
-            }
+            if (num > maior) maior = num;
+            if (num < menor) menor = num;
         }
+
+        System.out.println("Maior número: " + maior);
+        System.out.println("Menor número: " + menor);
     }
 }
