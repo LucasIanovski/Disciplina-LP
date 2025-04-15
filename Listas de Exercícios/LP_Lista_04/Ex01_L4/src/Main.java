@@ -2,18 +2,15 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int maior = Integer.MIN_VALUE, menor = Integer.MAX_VALUE, num;
+        int number;
 
-        for (int i = 1; i <= 5; i++) {
-            System.out.print("Digite o " + i + "º número: ");
-            num = sc.nextInt();
+        Scanner in = new Scanner(System.in);
 
-            if (num > maior) maior = num;
-            if (num < menor) menor = num;
+        System.out.println("Digite um número inteiro: ");
+        number= in.nextInt();
+
+        for (int i=0; i<=10; i++){
+            System.out.println(number + " x " + i + "= " + (number*i));
         }
-
-        System.out.println("Maior número: " + maior);
-        System.out.println("Menor número: " + menor);
     }
 }
