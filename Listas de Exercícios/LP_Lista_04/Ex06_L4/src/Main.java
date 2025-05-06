@@ -2,23 +2,24 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int a, b, temp;
+
+        Scanner in = new Scanner(System.in);
+        int i, inicio, fim;
 
         System.out.print("Digite o primeiro número: ");
-        a = sc.nextInt();
-
+        inicio = in.nextInt();
         System.out.print("Digite o segundo número: ");
-        b = sc.nextInt();
+        fim = in.nextInt();
 
-        if (a > b) {
-            temp = a;
-            a = b;
-            b = temp;
+        if (inicio > fim) {
+            int aux = inicio;
+            inicio = fim;
+            fim = aux;
         }
 
-        for (int i = a + 1; i < b; i++) {
+        for (i = inicio + 1; i < fim; i++) {
             System.out.println(i);
         }
+
     }
 }

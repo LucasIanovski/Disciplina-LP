@@ -2,25 +2,22 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int num, i;
-        boolean primo = true;
+
+        Scanner in = new Scanner(System.in);
+        int i, numero, divisores = 0;
 
         System.out.print("Digite um número: ");
-        num = sc.nextInt();
+        numero = in.nextInt();
 
-        if (num <= 1) primo = false;
-        else {
-            for (i = 2; i <= Math.sqrt(num); i++) {
-                if (num % i == 0) {
-                    primo = false;
-                    break;
-                }
-            }
+        for (i = 1; i <= numero; i++) {
+            if (numero % i == 0) divisores++;
         }
 
-        if (primo) System.out.println(num + " é primo.");
-        else System.out.println(num + " não é primo.");
+        if (divisores == 2) {
+            System.out.println(numero + " é primo.");
+        } else {
+            System.out.println(numero + " não é primo.");
+        }
+
     }
 }
-

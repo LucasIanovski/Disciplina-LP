@@ -2,15 +2,16 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int number;
 
         Scanner in = new Scanner(System.in);
+        int i, numero;
 
-        System.out.println("Digite um número inteiro: ");
-        number= in.nextInt();
+        System.out.print("Digite um número para ver a tabuada: ");
+        numero = in.nextInt();
 
-        for (int i=0; i<=10; i++){
-            System.out.println(number + " x " + i + "= " + (number*i));
+        for (i = 0; i <= 10; i++) {
+            System.out.println(numero + " x " + i + " = " + (numero * i));
         }
+
     }
 }
