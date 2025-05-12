@@ -1,35 +1,22 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        int[][] m = new int[5][5];
-        int i, j, soma, maiorLinha = Integer.MIN_VALUE, maiorColuna = Integer.MIN_VALUE;
-        Scanner in = new Scanner(System.in);
-
-        for (i = 0; i < 5; i++) {
-            for (j = 0; j < 5; j++) {
-                System.out.print("m[" + i + "][" + j + "] = ");
-                m[i][j] = in.nextInt();
-            }
-        }
-
-        for (i = 0; i < 5; i++) {
+        // Cria uma matriz 5x5 já preenchida
+        int[][] matriz = {{1,2,3,4,5},{2,2,2,2,2},{5,5,5,5,5},{9,0,1,2,3},{4,3,2,1,0}};
+        int maiorLinha = 0, maiorColuna = 0, soma;
+        // Percorre cada linha com foreach para calcular maior soma
+        for (int[] linha : matriz) {
             soma = 0;
-            for (j = 0; j < 5; j++) {
-                soma += m[i][j];
-            }
+            for (int num : linha) soma += num;
             if (soma > maiorLinha) maiorLinha = soma;
         }
-
-        for (j = 0; j < 5; j++) {
+        // Percorre colunas com índice fixo
+        for (int j = 0; j < matriz[0].length; j++) {
             soma = 0;
-            for (i = 0; i < 5; i++) {
-                soma += m[i][j];
-            }
+            for (int[] linha : matriz) soma += linha[j];
             if (soma > maiorColuna) maiorColuna = soma;
         }
-
-        System.out.println("Maior soma das linhas: " + maiorLinha);
-        System.out.println("Maior soma das colunas: " + maiorColuna);
+        // Exibe os resultados
+        System.out.println("Maior soma linha: " + maiorLinha);
+        System.out.println("Maior soma coluna: " + maiorColuna);
     }
 }

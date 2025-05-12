@@ -1,23 +1,21 @@
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        int[] v = {3, 5, 7, 2, 8, 9, 1, 4, 6, 0};
-        int i, n;
-        boolean encontrado = false;
-        Scanner in = new Scanner(System.in);
+        // Vetor fixo com 10 números
+        int[] vetor = {3,6,1,8,4,7,9,2,0,5}; boolean encontrado = false;
+        Scanner sc = new Scanner(System.in);
+        // Solicita número ao usuário
         System.out.print("Digite um número: ");
-        n = in.nextInt();
-
-        for (i = 0; i < v.length; i++) {
-            if (v[i] == n) {
+        int numero = sc.nextInt();
+        // Percorre o vetor procurando o número digitado
+        for (int i = 0; i < vetor.length; i++) {
+            if (vetor[i] == numero) { // Se encontrar, mostra a posição
                 System.out.println("Valor encontrado na posição " + i);
-                encontrado = true;
-                break;
+                encontrado = true; // Marca como encontrado
+                break; // Interrompe o loop
             }
         }
-        if (!encontrado) {
-            System.out.println("Valor não encontrado");
-        }
+        // Se não achou, informa ao usuário
+        if (!encontrado) System.out.println("Valor não encontrado.");
     }
 }
