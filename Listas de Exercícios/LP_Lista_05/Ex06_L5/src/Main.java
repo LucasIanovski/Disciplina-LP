@@ -1,4 +1,4 @@
-public class Main {
+ public class Main {
     public static void main(String[] args) {
         // Cria vetor para ser invertido usando apenas uma variável auxiliar
         int[] vetor = {1,2,3,4,5,6,7}; int aux;
@@ -12,3 +12,5 @@ public class Main {
         for (int numero : vetor) System.out.print(numero + " ");
     }
 }
+
+
