@@ -8,6 +8,9 @@ public class Main {
             vetor[i] = (i % 2 == 0) ? vetor[i] + 2 : vetor[i] * 2;
         }
         // Imprime todos os valores do vetor usando foreach
-        for (int numero : vetor) System.out.print(numero + " ");
+        for (int numero : vetor) {
+            System.out.print(numero + " ");
+        }
+        System.out.println();
     }
 }

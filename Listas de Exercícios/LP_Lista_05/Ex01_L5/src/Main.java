@@ -7,5 +7,6 @@ public class Main {
             // Imprime o valor atual do vetor
             System.out.print(vetor[i] + " ");
         }
+        System.out.println();
     }
 }
