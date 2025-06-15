@@ -2,15 +2,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        double dkm, resultado;  // nome da variável
+        double km, milhas;
 
-        Scanner in = new Scanner(System.in); // Configura o Scanner
+        Scanner in = new Scanner(System.in);
 
-        System.out.println("Digite a distancia em km:");
-        dkm = in.nextDouble();  // Lê a primeira medida
+        System.out.println("Digite a distancia em Km:");
+        km = in.nextDouble();
 
-        resultado = dkm * 0.621371;  // Calcula a conversão de km para milhas
-
-        System.out.println("A distancia em milhas é " + resultado);  // Exibe o resultado
+        milhas = km / 1.60934;
+        System.out.println(km + " Km equivalem a " + milhas + " milhas");
     }
 }
