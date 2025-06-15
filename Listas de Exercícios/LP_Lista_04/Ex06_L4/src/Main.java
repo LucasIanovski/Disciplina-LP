@@ -11,14 +11,19 @@ public class Main {
         System.out.print("Digite o segundo número: ");
         fim = in.nextInt();
 
+
         if (inicio > fim) {
             int aux = inicio;
             inicio = fim;
             fim = aux;
         }
 
+
         for (i = inicio + 1; i < fim; i++) {
-            System.out.println(i);
+            // Exibe somente números naturais (0 ou positivos)
+            if (i >= 0) {
+                System.out.println(i);
+            }
         }
 
     }
