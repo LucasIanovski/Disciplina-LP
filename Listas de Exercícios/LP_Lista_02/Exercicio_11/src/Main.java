@@ -2,15 +2,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        double celsius, resultado;  // nome da variável
+        double celsius, fahrenheit;
 
-        Scanner in = new Scanner(System.in); // Configura o Scanner
+        Scanner in = new Scanner(System.in);
 
-        System.out.println("Digite a temperatura em Celsius:");
-        celsius = in.nextDouble();  // Lê a primeira medida
+        System.out.println("Digite a temperatura em graus Celsius:");
+        celsius = in.nextDouble();
 
-        resultado = (celsius * 9/5) + 32;  // Conversão para Fahrenheit
-
-        System.out.println("A temperatura em Fahrenheit é: " + resultado + "°F");  // Exibe o resultado
+        fahrenheit = (celsius * 1.8) + 32;
+        System.out.println(celsius + " graus Celsius equivalem a " + fahrenheit + " graus Fahrenheit");
     }
 }
