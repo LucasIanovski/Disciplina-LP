@@ -2,48 +2,50 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        // Declaração de variáveis
         Scanner in = new Scanner(System.in);
+        String nome;
+        int n, resultado;
 
-        // 1. Pegando o nome do usuario
-        String name;
-        System.out.println("Informe seu nome:");
-        name = in.next();
+        // Pegando o nome do usuário
+        System.out.print("Informe seu nome: ");
+        nome = in.next();
 
-        // 2. Gerando o menu
-        gerarMenu(name);
+        // Exibindo o menu
+        mostrarMenu(nome);
 
-        // 3. Pedindo um número inteiro positivo
-        System.out.println("Digite um número inteiro positivo:");
-        int n = in.nextInt();
+        // Pedindo um número inteiro positivo
+        do {
+            System.out.print("Digite um número inteiro positivo: ");
+            n = in.nextInt();
+        } while (n <= 0); // Validação: só aceita números maiores que 0
 
-        // 4. Chamando a função recursiva e mostrando o resultado
-        int resultado = somaAte(n);
-        if (resultado != -1) {
-            System.out.println("A soma de 1 até " + n + " é: " + resultado);
-        }
+        // Chamando a função normal que soma até N
+        resultado = somaAteN(n);
 
-        System.out.println("\nPrograma finalizado.");
+        // Exibindo o resultado
+        System.out.println("A soma de 1 até " + n + " é: " + resultado);
     }
 
-    public static void gerarMenu(String name) {
-        System.out.println("Bem-vindo: " + name);
-        System.out.println("Menu:");
-        System.out.println("OP1");
-        System.out.println("OP2");
-        System.out.println("OP3");
+    // Função para exibir o menu
+    public static void mostrarMenu(String nome) {
+        System.out.println("\nBem-vindo, " + nome);
+        System.out.println("==== MENU ====");
+        System.out.println("1. Somar até N");
+        System.out.println("2. Outra opção");
+        System.out.println("3. Sair");
     }
 
-    public static int somaAte(int n) {
-        if (n <= 0) {
-            System.out.println("Erro: o número deve ser maior que zero.");
-            return -1;
+    // Função com laço for para somar os números de 1 até N
+    public static int somaAteN(int n) {
+        int soma = 0;
+        for (int i = 1; i <= n; i++) {
+            soma += i;
         }
-        if (n == 1) {
-            return 1;
-        }
-        return n + somaAte(n - 1);
+        return soma;
     }
 }
+
 
 // Funcao menu
 // public determina que eu posso acessar essa função em outros diretórios
